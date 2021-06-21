@@ -1,0 +1,67 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly",
+    "process": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "@emotion",
+    "@typescript-eslint",
+    "import",
+    "jest-dom",
+    "prettier",
+    "react",
+    "react-hooks",
+    "unused-imports"
+  ],
+  "rules": {
+    "@emotion/import-from-emotion": "error",
+    "@emotion/no-vanilla": "error",
+    "@emotion/pkg-renaming": "error",
+    "@emotion/styled-import": "error",
+    "@emotion/syntax-preference": [2, "string"],
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/member-delimiter-style": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      { "vars": "all", "args": "none" }
+    ],
+    "import/order": ["error", { "newlines-between": "never" }],
+    "jest-dom/prefer-in-document": "warn",
+    "jest-dom/prefer-to-have-value": "warn",
+    "no-restricted-imports": ["error", "lodash"],
+    "prettier/prettier": "warn",
+    "react-hooks/exhaustive-deps": "error",
+    "react/prop-types": "off",
+    "sort-imports": "off",
+    "unused-imports/no-unused-imports-ts": "error",
+    "unused-imports/no-used-var-ts": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
+}
