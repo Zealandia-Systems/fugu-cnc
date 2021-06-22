@@ -4,6 +4,8 @@ import Port from '../common/Port';
 
 export default () => {
     ipcMain.handle('ports:list', async (event: Electron.IpcMainInvokeEvent, ...args: any[]) => {
+        console.log('ports:list');
+        
         return (await SerialPort.list()).map(p => {
             return new Port(p.path, p.manufacturer);
         });

@@ -14,13 +14,18 @@
     "electron": "^13.1.2",
     "electron-rebuild": "^2.3.5",
     "electron-reloader": "^1.2.1",
-    "typescript": "^4.3.4"
+    "ts-loader": "^9.2.3",
+    "typescript": "^4.3.4",
+    "webpack": "^5.40.0",
+    "webpack-cli": "^4.7.2"
   },
   "scripts": {
-    "build": "tsc",
-    "watch": "tsc -w",
+    "build-client": "webpack",
+    "watch-client": "webpack --watch",
+    "build-server": "tsc",
+    "watch-server": "tsc -w",
     "lint": "eslint -c .eslintrc --ext .ts ./src",
-    "start": "npm run build && electron ./dist/index.js",
+    "start": "npm run build-server && npm run build-client && electron ./dist/index.js",
     "postinstall": "npx electron-rebuild"
   },
   "repository": {

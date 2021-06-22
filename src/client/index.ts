@@ -1,8 +1,8 @@
 import { IPort } from "../common/Port";
-import { ipcRenderer } from "electron";
+import ipc from './ipc';
 
-async() => {
-    const ports = await ipcRenderer.invoke('ports:list') as IPort[];
+(async () => {
+    const ports = await ipc.invoke('ports:list') as IPort[];
 
     console.log(JSON.stringify(ports));
-}
+})();

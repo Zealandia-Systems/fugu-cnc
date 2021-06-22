@@ -4,7 +4,7 @@ try {
 
 import { app, BrowserWindow, shell } from 'electron';
 import Store from 'electron-store';
-import * as path from 'path';
+import Path from 'path';
 import isDev from 'electron-is-dev';
 import server from './server';
 
@@ -14,9 +14,9 @@ const createWindow = () => {
         width: 800,
         height: 600,
         webPreferences: {
-            contextIsolation: false,
+            contextIsolation: true,
             nodeIntegration: true,
-        //preload: path.join(__dirname, "preload.js"),
+            preload: Path.join(__dirname, '../dist/preload.js'),
         }
     });
 
@@ -33,7 +33,7 @@ const createWindow = () => {
     });
 
     if(isDev) {
-        window.loadFile(path.join(__dirname, "../public/index.html"));
+        window.loadFile(Path.join(__dirname, "../dist/index.html"));
         webContents.openDevTools();
     } else {
         //window.loadFile
@@ -63,6 +63,6 @@ const createWindow = () => {
     Store.initRenderer();
 
     server();
-    
+
     createWindow();
 })();
