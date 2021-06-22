@@ -25,7 +25,6 @@
     "sourceType": "module"
   },
   "plugins": [
-    "@emotion",
     "@typescript-eslint",
     "import",
     "jest-dom",
@@ -35,11 +34,6 @@
     "unused-imports"
   ],
   "rules": {
-    "@emotion/import-from-emotion": "error",
-    "@emotion/no-vanilla": "error",
-    "@emotion/pkg-renaming": "error",
-    "@emotion/styled-import": "error",
-    "@emotion/syntax-preference": [2, "string"],
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/member-delimiter-style": "off",

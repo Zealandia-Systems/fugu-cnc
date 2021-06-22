@@ -61,11 +61,6 @@
     global-agent "^2.0.2"
     global-tunnel-ng "^2.7.1"
 
-"@emotion/eslint-plugin@^11.2.0":
-  version "11.2.0"
-  resolved "https://registry.yarnpkg.com/@emotion/eslint-plugin/-/eslint-plugin-11.2.0.tgz#10cb154510728be9276b1cecee15917f26919c44"
-  integrity sha512-vpyeUtQKudpYjQ2hUG6vroVqSQiBn1Q37HBEck5wma9M+DmzaU8Uh8k5GffXfGcVzervPB3GCX5ip6n7toLmIQ==
-
 "@eslint/eslintrc@^0.4.2":
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/@eslint/eslintrc/-/eslintrc-0.4.2.tgz#f63d0ef06f5c0c57d76c4ab5f63d3835c51b0179"
