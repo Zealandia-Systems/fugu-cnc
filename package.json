@@ -39,7 +39,7 @@
     "format:write": "npm run format:check -- --write",
     "lint": "eslint --ext \".js,.jsx,.ts,.tsx\" --ignore-pattern \"dist\" .",
     "lint:fix": "npm run lint -- --fix",
-    "start": "npm run build-server && npm run build-client && electron ./dist/index.js",
+    "start": "npm run build:server && npm run build:client && electron ./dist/index.js",
     "postinstall": "npx electron-rebuild",
     "test": "echo no tests???",
     "posttest": "npm run lint && npm run format:check"
