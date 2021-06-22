@@ -1,5 +1,5 @@
-import ports from "./ports";
+import api from "./api";
 
 export default () => {
-  ports();
+  api();
 };

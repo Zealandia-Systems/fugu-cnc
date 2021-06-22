@@ -1,14 +1,21 @@
+/* eslint-disable import/order */
+import Path from "path";
+import isDev from "electron-is-dev";
+
 try {
   // eslint-disable-next-line @typescript-eslint/no-var-requires
-  require("electron-reloader")(module);
+  require("electron-reloader")(module, {
+    debug: isDev,
+    ignore: "src",
+  });
 } catch (error) {
   console.error(error);
 }
 
-import Path from "path";
+import moduleAlias from "module-alias";
+moduleAlias.addPath("dist");
 import { app, BrowserWindow, shell } from "electron";
 import Store from "electron-store";
-import isDev from "electron-is-dev";
 import server from "./server";
 
 const createWindow = () => {
@@ -30,13 +37,13 @@ const createWindow = () => {
   });
 
   webContents.setWindowOpenHandler((details: Electron.HandlerDetails) => {
-    shell.openExternal(details.url);
+    void shell.openExternal(details.url);
 
     return { action: "deny" };
   });
 
   if (isDev) {
-    window.loadFile(Path.join(__dirname, "../public/index.html"));
+    void window.loadFile(Path.join(__dirname, "../dist/index.html"));
     webContents.openDevTools();
   } else {
     //window.loadFile

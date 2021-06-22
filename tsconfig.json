@@ -1,7 +1,8 @@
 {
   "extends": "@tsconfig/node14/tsconfig.json",
   "compilerOptions": {
-    "baseUrl": "src",
+    "moduleResolution": "node",
+    "baseUrl": ".",
     "outDir": "dist",
     "noImplicitAny": true,
     "removeComments": true,
@@ -9,11 +10,10 @@
     "sourceMap": true,
     "lib": ["dom", "esnext"],
     "paths": {
+      "client/*": ["src/client/*"],
       "common/*": ["src/common/*"],
       "server/*": ["src/server/*"]
     }
   },
-  "exclude": [
-    "src/client/*"
-  ]
+  "include": ["src/**/*.ts", "tests/**/*.ts"]
 }
