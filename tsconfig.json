@@ -1,20 +1,19 @@
 {
-    "extends": "@tsconfig/node14/tsconfig.json",
-
-    "compilerOptions": {
-        "baseUrl": "src",
-        "outDir": "dist",
-        "noImplicitAny": true,
-        "removeComments": true,
-        "preserveConstEnums": true,
-        "sourceMap": true,
-        "lib": ["dom"],
-        "paths": {
-            "common/*": ["src/common/*"],
-            "server/*": ["src/server/*"]
-        }
-    },
-    "exclude": [
-        "src/client/*"
-    ]
+  "extends": "@tsconfig/node14/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "src",
+    "outDir": "dist",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "lib": ["dom"],
+    "paths": {
+      "common/*": ["src/common/*"],
+      "server/*": ["src/server/*"]
+    }
+  },
+  "exclude": [
+    "src/client/*"
+  ]
 }
