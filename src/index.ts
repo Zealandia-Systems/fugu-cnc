@@ -12,16 +12,16 @@ import isDev from "electron-is-dev";
 import server from "./server";
 
 const createWindow = () => {
-    // Create the browser window.
-    const window = new BrowserWindow({
-        width: 800,
-        height: 600,
-        webPreferences: {
-            contextIsolation: true,
-            nodeIntegration: true,
-            preload: Path.join(__dirname, '../dist/preload.js'),
-        }
-    });
+  // Create the browser window.
+  const window = new BrowserWindow({
+    width: 800,
+    height: 600,
+    webPreferences: {
+      contextIsolation: true,
+      nodeIntegration: true,
+      preload: Path.join(__dirname, "../dist/preload.js"),
+    },
+  });
 
   const webContents = window.webContents;
 
@@ -41,7 +41,7 @@ const createWindow = () => {
   } else {
     //window.loadFile
   }
-}
+};
 
 (async () => {
   await app.whenReady();

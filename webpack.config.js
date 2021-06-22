@@ -1,22 +1,22 @@
-const path = require('path');
+/* eslint-env node */
 
-module.exports = {
-  entry: './src/client/index.ts',
-  devtool: 'inline-source-map',
-  module: {
-    rules: [
-      {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
-      },
-    ],
-  },
-  resolve: {
-    extensions: ['.tsx', '.ts', '.js'],
-  },
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-  }
+import { resolve as _resolve } from "path";
+
+export const entry = "./src/client/index.ts";
+export const devtool = "inline-source-map";
+export const module = {
+  rules: [
+    {
+      test: /\.tsx?$/,
+      use: "ts-loader",
+      exclude: /node_modules/,
+    },
+  ],
+};
+export const resolve = {
+  extensions: [".tsx", ".ts", ".js"],
+};
+export const output = {
+  filename: "bundle.js",
+  path: _resolve(__dirname, "dist"),
 };
