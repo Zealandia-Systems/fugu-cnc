@@ -2,7 +2,7 @@
   "name": "fugu",
   "description": "",
   "version": "1.0.0",
-  "license": "MIT",
+  "license": "GPLv3",
   "dependencies": {
     "@tsconfig/node14": "^1.0.1",
     "@types/module-alias": "^2.0.0",
