@@ -11,6 +11,7 @@
     "plugin:@typescript-eslint/recommended",
     "prettier"
   ],
+  "ignorePatterns": ["webpack.*.js", "dist/**"],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly",

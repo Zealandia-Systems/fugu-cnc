@@ -1,8 +1,7 @@
-import { IPort } from "../common/Port";
-import ipc from "./ipc";
+import Port from "client/api/Port";
 
 (async () => {
-  const ports = (await ipc.invoke("ports:list")) as IPort[];
+  const ports = await Port.list();
 
-  console.log(JSON.stringify(ports));
+  console.log(`ports: ${JSON.stringify(ports)}`);
 })();
