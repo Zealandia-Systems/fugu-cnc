@@ -7,7 +7,7 @@
     "removeComments": true,
     "preserveConstEnums": true,
     "sourceMap": true,
-    "lib": ["dom"],
+    "lib": ["dom", "esnext"],
     "paths": {
       "common/*": ["src/common/*"],
       "server/*": ["src/server/*"]
