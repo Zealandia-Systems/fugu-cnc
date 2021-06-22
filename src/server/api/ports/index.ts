@@ -1,5 +1,5 @@
 import { ipcMain } from "electron";
-import Port from "./Port";
+import Port from "./port";
 
 export default () => {
   ipcMain.handle(

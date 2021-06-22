@@ -1,4 +1,4 @@
-import Port from "client/api/Port";
+import Port from "client/api/port";
 
 (async () => {
   const ports = await Port.list();

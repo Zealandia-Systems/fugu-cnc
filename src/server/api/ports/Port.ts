@@ -1,4 +1,4 @@
-import AbstractPort from "common/api/Port";
+import AbstractPort from "common/api/port";
 import SerialPort from "serialport";
 
 export default class Port extends AbstractPort {

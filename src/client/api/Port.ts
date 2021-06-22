@@ -1,4 +1,4 @@
-import AbstractPort from "common/api/Port";
+import AbstractPort from "common/api/port";
 import ipc from "./ipc";
 
 export default class Port extends AbstractPort {
