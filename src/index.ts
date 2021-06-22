@@ -5,7 +5,7 @@ try {
   console.error(error);
 }
 
-import * as path from "path";
+import Path from "path";
 import { app, BrowserWindow, shell } from "electron";
 import Store from "electron-store";
 import isDev from "electron-is-dev";
@@ -17,9 +17,9 @@ const createWindow = () => {
     width: 800,
     height: 600,
     webPreferences: {
-      contextIsolation: false,
+      contextIsolation: true,
       nodeIntegration: true,
-      //preload: path.join(__dirname, "preload.js"),
+      preload: Path.join(__dirname, "../dist/preload.js"),
     },
   });
 
@@ -36,7 +36,7 @@ const createWindow = () => {
   });
 
   if (isDev) {
-    window.loadFile(path.join(__dirname, "../public/index.html"));
+    window.loadFile(Path.join(__dirname, "../public/index.html"));
     webContents.openDevTools();
   } else {
     //window.loadFile
