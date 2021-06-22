@@ -1,5 +1,5 @@
-import ports from './ports';
+import ports from "./ports";
 
 export default () => {
-    ports();
+  ports();
 };
